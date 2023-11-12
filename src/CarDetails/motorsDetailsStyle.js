@@ -102,18 +102,24 @@ font-weight: 500;
 line-height: normal;
 }
 .comfortWrapper{
-margin-top: 50px;
 display: flex;
-align-items: center;
-justify-content:space-between;
-padding-left: 100px;
-height:477px;
+justify-content: center;
+height:500px;
+gap: 0px;
 }
-.ComfortDiv{
+.comfortRight{
+display: flex;
+flex: 1;
+}
+.comfortLeft{
+display: flex;
+flex: 1;
+}
+.pTitleDiv{
 width: 533px;
 height: 169px;
 flex-shrink: 0;
-    }
+}
 p{
 color: #373737;
 font-family: Montserrat;
@@ -123,7 +129,7 @@ font-weight: 400;
 line-height: 24px; /* 150% */
 padding-top: 20px;
 }
-.Comfort{
+.pTitle{
 color: var(--text, #373737);
 font-family: Montserrat;
 font-size: 45px;
@@ -131,41 +137,32 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
 }
-.comfortWrapper2{
+`
+export const AppBarDiv=styled.div`
+margin-top:40px;
+height: 60px;
+background: rgba(0, 109, 171, 0.20);
 display: flex;
+justify-content: start;
 align-items: center;
-justify-content:space-between;
-height:477px;
-padding-right: 100px;
+.AppBarInfo{
+display:flex;
+gap:50px;
+margin-left:50px;
+
 }
-.ComfortDiv2{
-width: 533px;
-height: 169px;
-flex-shrink: 0;
-}
-p{
-color: #373737;
+.barItem{
+padding:20px;
+color: #FFF;
 font-family: Montserrat;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 150% */
-padding-top: 20px;
-}
-.Comfort2{
-color: var(--text, #373737);
-font-family: Montserrat;
-font-size: 35px;
+font-size: 18px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
 }
-.comfortWrapper3{
-    display: flex;
-align-items: center;
-justify-content:space-between;
-padding-left: 100px;
-height:477px;
+.barItem:active {
+background-color:#006DAB;
+color:white;
 }
 
 `

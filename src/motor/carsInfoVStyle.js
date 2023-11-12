@@ -1,91 +1,10 @@
-import styled from "styled-components";
-import img from "../assets/motorBackground.png"
-export const MotorWrapper=styled.div`
-background-image: url(${img});
-height:380px;
-background-size: cover;
-.motorTitle{
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.motorTitleDiv{
-height:380px;
-display: flex;
-justify-content:center;
-align-items: center;
-}
-.titlep{
-color: #FFF;
-font-family: Montserrat;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-}
-.titleText{
-color: #FFF;
-font-family: Montserrat;
-font-size: 27px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-}
-.motors{
-color: #FFF;
-font-family: Montserrat;
-font-size: 80px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-}
-`
-export const RentPrice=styled.div`
-margin-top: 20px;
-
-.selectButton{
-width: 50px;
-height: 40px;
-align-items:center;
-background: none;
-border: solid 1px  rgba(55, 55, 55, 0.50);
-border-top-left-radius:5px;
-border-bottom-left-radius:5px;
-}
-.selectButton2{
-width: 50px;
-height: 40px;
-align-items:center;
-background: none;
-border: solid 1px  rgba(55, 55, 55, 0.50);
-border-top-right-radius:5px;
-border-bottom-right-radius:5px;
-}
-.buttonDiv{
-display: flex;
-align-items : center;   
-}
-.carSlectRigtEnd{
-display: flex;
-align-items : center; 
-justify-content:center;
-gap: 20px;
-}
-.sortBy{
-color: var(--text, #373737);
-font-family: Montserrat;
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: 100%; /* 16px */
-}
-`
-export const CarsInfo=styled.div`
-margin-top:50px;
-padding-bottom:300px;
-display: flex;
-justify-content: center;
+import styled from "styled-components"
+export const  MotorVWrapper=styled.div`
 border: black solid 1px;
+`
+export const VCarsInfo=styled.div`
+margin-top:20px;
+padding-bottom:300px;
 .OrderCarDiv{
 display: flex;  
 justify-content: center;
@@ -221,15 +140,5 @@ box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.10);
 width: 75px;
 height: 62px;
 flex-shrink: 0;
-}
-`
-export const Container=styled.div`
-border: solid black 1px;
-.carSelect{
-    display: flex;
-}
-.carSelectRight{
-    display: flex;
-    gap:200px;
 }
 `

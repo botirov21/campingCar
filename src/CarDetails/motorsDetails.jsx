@@ -1,6 +1,6 @@
 import React from 'react'
-import { CarDetailsWrapper, DetailedInfo } from './motorsDetailsStyle'
-import { useParams } from 'react-router-dom';
+import { AppBarDiv, CarDetailsWrapper, DetailedInfo } from './motorsDetailsStyle'
+import { Link, useParams } from 'react-router-dom';
 import { card } from '../mock/carsData';
 import img from '../assets/detailCarImage.png';
 import img2 from "../assets/comfortImage.png"
@@ -22,11 +22,11 @@ const MotorsDetails = () => {
         <div style={{ color: 'white' }} className='carName' >{openCarDetail.car.name}</div>
         <Stack style={{ marginTop: '30px' }} spacing={2} direction="row">
           <Button style={{ borderRadius: '5px' }} variant="contained">ADD TO CART</Button>
-          <Button style={{ borderRadius: '5px', color: 'white', border: 'solid 1px white'}} variant="outlined">COMPARE</Button>
+          <Button style={{ borderRadius: '5px', color: 'white', border: 'solid 1px white' }} variant="outlined">COMPARE</Button>
         </Stack>
       </div>
       <DetailedInfo>
-        <div style={{ display: 'flex', gap: '30px', justifyContent: 'center', paddingRight:'60px' }}>
+        <div style={{ display: 'flex', gap: '30px', justifyContent: 'center', paddingRight: '60px' }}>
           <div style={{ paddingLeft: '0px' }}>
             <Bounce left>
               <img style={{ width: '626px', height: '381px' }} src={img} alt="" />
@@ -55,65 +55,93 @@ const MotorsDetails = () => {
           </div>
         </div>
         <div className='comfortWrapper'>
-          <div className='ComfortDiv'>
-            <h3 className='Comfort'>Comfort</h3>
-            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.x</p>
+          <div style={{ justifyContent: 'end' }} className='comfortLeft'>
+            <div style={{ padding: '50px', marginTop: '70px', marginRight: '150px' }} className='pTitleDiv'>
+              <h3 className='pTitle'>Comfort</h3>
+              <p >L0orem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.x</p>
+            </div>
           </div>
-          <div>
+          <div style={{ justifyContent: 'start' }} className='comfortRight'>
             <Bounce right>
-              <img style={{ width: '760px', height: '477px' }} src={img2} alt="" />
+              <img  src={img2} alt="" />
             </Bounce>
           </div>
         </div>
-        <div className='comfortWrapper2'>
-          <div>
+        <div className='comfortWrapper'>
+          <div style={{ justifyContent: 'end' }} className='comfortLeft'>
             <Bounce left>
-              <img style={{ width: '760px', height: '477px' }} src={img3} alt="" />
+              <img src={img3} alt="" />
             </Bounce>
           </div>
-          <div className='ComfortDiv2'>
-            <h3 className='Comfort2'>Tidying away is child’s play!</h3>
-            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.</p>
+          <div style={{ justifyContent: 'start' }} className='comfortRight'>
+            <div style={{ paddingTop: '70px', marginLeft: '50px' }} className='pTitleDiv'>
+              <h3 className='pTitle'>Comfortt</h3>
+              <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.x</p>
+            </div>
           </div>
         </div>
-        <div className='comfortWrapper3'>
-          <div className='ComfortDiv'>
-            <h3 className='Comfort'>Ventilated , Lit up</h3>
-            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.x</p>
+        <div className='comfortWrapper'>
+          <div style={{ justifyContent: 'end' }} className='comfortLeft'>
+            <div style={{ padding: '50px', marginTop: '40px', marginRight: '150px' }} className='pTitleDiv'>
+              <h3 className='pTitle'>Comfort</h3>
+              <p >L0orem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.x</p>
+            </div>
           </div>
-          <div>
+          <div style={{ justifyContent: 'start' }} className='comfortRight'>
             <Bounce right>
-              <img style={{ width: '760px', height: '477px' }} src={img4} alt="" />
+              <img src={img4} alt="" />
             </Bounce>
           </div>
         </div>
-        <div className='comfortWrapper2'>
-          <div>
+        <div className='comfortWrapper'>
+          <div style={{ justifyContent: 'end' }} className='comfortLeft'>
             <Bounce left>
-              <img style={{ width: '760px', height: '477px' }} src={img5} alt="" />
+              <img src={img5 } alt="" />
             </Bounce>
           </div>
-          <div className='ComfortDiv2'>
-            <h3 className='Comfort2'>Easy access</h3>
-            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.</p>
+          <div style={{ justifyContent: 'start' }} className='comfortRight'>
+            <div style={{ marginTop: '90px', marginLeft: '50px' }} className='pTitleDiv'>
+              <h3 className='pTitle'>Comfortt</h3>
+              <p >Lorsem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.x</p>
+            </div>
           </div>
         </div>
-        <div className='comfortWrapper3'>
-          <div className='ComfortDiv'>
-            <h3 className='Comfort'>Ventilated , Lit up</h3>
-            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.x</p>
-            <Stack style={{ marginTop: '55px' }} spacing={2} direction="row">
-              <Button style={{ borderRadius: '5px' }} variant="contained">ADD TO CART</Button>
-              <Button style={{ borderRadius: '5px' }} variant="outlined">COMPARE</Button>
-            </Stack>
+        <div className='comfortWrapper'>
+          <div style={{ justifyContent: 'end' }} className='comfortLeft'>
+            <div style={{ padding: '50px', marginTop: '40px', marginRight: '150px' }} className='pTitleDiv'>
+              <h3 className='pTitle'>Ventilated , Lit up</h3>
+              <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.x</p>
+              <Stack style={{ marginTop: '55px' }} spacing={2} direction="row">
+                <Button style={{ borderRadius: '5px' }} variant="contained">ADD TO CART</Button>
+                <Button style={{ borderRadius: '5px' }} variant="outlined">COMPARE</Button>
+              </Stack>
+            </div>
           </div>
-          <div>
-            <Bounce right>
-              <img style={{ width: '760px', height: '477px' }} src={img6} alt="" />
-            </Bounce>
+          <div style={{ justifyContent: 'start' }} className='comfortRight'>
+            <div>
+              <Bounce right>
+                <img src={img6} alt="" />
+              </Bounce>
+            </div>
           </div>
         </div>
       </DetailedInfo>
+      <AppBarDiv>
+        <div className='AppBarInfo'>
+          <Link   to={`/item-reviews/${openCarDetail.id}`}>
+            <div  className='barItem' >Item reviews</div>
+          </Link>
+          <Link to={`/qaSection/${openCarDetail.id}`}>
+          <div  className='barItem'>Q&A</div>
+          </Link>
+          <Link  to={`/faqSection/${openCarDetail.id}`}>
+          <div  className='barItem'>FAQ</div>
+          </Link>
+          <Link to={`/contact/${openCarDetail.id}`}>
+            <div  className='barItem'>Contact</div>
+          </Link>
+        </div>
+      </AppBarDiv>
     </CarDetailsWrapper>
   )
 }

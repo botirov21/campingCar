@@ -5,7 +5,8 @@ height: 350px;
 background-color: var(--blue, #006DAB);
 .FooterWrapper{
 display:flex;
-justify-content: space-around;
+justify-content: center;
+gap:250px;
 padding-top:50px;
 }
 h1{
