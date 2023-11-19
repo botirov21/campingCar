@@ -1,16 +1,23 @@
 import styled from "styled-components";
 import img from "../assets/motorBackground.png"
+import { Link } from "react-router-dom";
+
+export const NavLink = styled(Link)`
+text-decoration:none;
+`
+
 export const MotorWrapper=styled.div`
 background-image: url(${img});
-height:380px;
+height:400px;
 background-size: cover;
+margin-top:60px;
 .motorTitle{
 display: flex;
 flex-direction: column;
 align-items: center;
 }
 .motorTitleDiv{
-height:380px;
+height:400px;
 display: flex;
 justify-content:center;
 align-items: center;
@@ -71,25 +78,17 @@ align-items : center;
 justify-content:center;
 gap: 20px;
 }
-.sortBy{
-color: var(--text, #373737);
-font-family: Montserrat;
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: 100%; /* 16px */
-}
+
 `
 export const CarsInfo=styled.div`
-margin-top:50px;
+margin-top:30px;
 padding-bottom:300px;
 display: flex;
 justify-content: center;
-border: black solid 1px;
 .OrderCarDiv{
 display: flex;  
 justify-content: center;
-gap:100px;
+gap:110px;
 }
 .OrderCarDivLeft{
 display: flex;
@@ -97,18 +96,17 @@ flex-direction: column;
 /* border-bottom: 1px solid  rgba(55, 55, 55, 0.50); */
 }
 .OrderCarDivRight{
-display: flex;
 display: grid;
 grid-template-areas: "a a a a";
-margin-top:20px;
-padding-right:820px
+justify-content:center;
+padding-right:730px;
 }
 
 .InputDiv{
 display: flex;
 align-items : center;
 gap: 40px;
-padding-left:10%;
+padding-left:13%;
 }
 input{
 width: 91px;
@@ -161,7 +159,7 @@ border-radius: 20px;
 background: #FFF;
 display:grid;
 grid-template-areas: " a a a a";
-gap: 50px;
+gap: 20px;
 border-radius:10px;
 }
 .orderBtn{
@@ -224,12 +222,47 @@ flex-shrink: 0;
 }
 `
 export const Container=styled.div`
-border: solid black 1px;
+display: flex;
+justify-content: center;
+gap:30px;
+padding-bottom:20px;
+align-items: center;
+
 .carSelect{
-    display: flex;
+display: flex;
+gap:30px;
+padding-top:10px;
 }
 .carSelectRight{
-    display: flex;
-    gap:200px;
+display: flex;
+align-items : center;
+gap: 320px;
+margin-left: 10px;
+border-bottom: 1px solid lightgrey; 
+}
+.carSlectRigtEnd{
+display: flex;
+gap:10px;
+}
+.carSelectleft{
+display: flex;
+align-items : center; 
+padding-right:  0px;
+width: 300px;
+border-bottom: 1px solid lightgrey;
+margin-left: 2%;
+}
+.sortBy{
+color: var(--text, #373737);
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 100%; /* 16px */
+width:80px;
+margin-top:10px;
+}
+.ItemDiv{
+width:120px;
 }
 `

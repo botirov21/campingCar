@@ -1,4 +1,4 @@
-export const TuningCard = {
+export const TunedCard = {
     carList: [
         {
             id: 46,

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, MotorWrapper,  } from './motorStyle'
+import { Container, MotorWrapper, } from './motorStyle'
 // import img from '../assets/carImage.png'
 import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
@@ -64,67 +64,72 @@ const Motor = () => {
         </div>
       </MotorWrapper>
       <Container>
-          <div className='carSelect'>
-            <div className='carSelectleft' >
-              <h3>Cost of car</h3>
-            </div>
-            <div className='carSelectRight' >
-              <div> 
-                <h3>Item  25.156</h3>
-              </div>
-              <div className='carSlectRigtEnd'>
-                <div>
-                  <p className='sortBy'>Sort by</p>
+        <div >
+          <div>
+            <div style={{ display: 'flex', justifyContent: 'right', alignItems: 'center' }} >
+              <div className='carSelect'>
+                <div className='carSelectleft' >
+                  <h3>Cost of car</h3>
                 </div>
-                <div  >
-                  <TextField
-                    size="small"
-                    label="Select"
-                    sx={{ width: 250 }}
-                    select
-                    value={personName}
-                    onChange={handleChange}
-                  >
-                    {names.map((name) => (
-                      <MenuItem key={name} value={name}>
-                        {name}
-                      </MenuItem>
-                    ))}
-                  </TextField>
-                </div>
-                <div>
-                  <TextField
-                    size="small"
-                    label="Select"
-                    sx={{ width: 100 }}
-                    select
-                    value={num}
-                    onChange={handleChangeNum}
-                  >
-                    {nums.map((num) => (
-                      <MenuItem key={num} value={num}>
-                        {num}
-                      </MenuItem>
-                    ))}
-                  </TextField>
-                </div>
-                <div className='buttonDiv' >
+                <div className='carSelectRight' >
                   <div>
-                    <MotorController
-                      onClick={(state) => {
-                        setActive(state);
-                      }}
-                    />
-                    <MotorSwitchControl active={active} />
+                    <h3 className='ItemDiv'>Item <span  style={{color: '#006DAB'}}>25.156</span> </h3>
+                  </div>
+                  <div className='carSlectRigtEnd'>
+                    <div>
+                      <p className='sortBy'>Sort by</p>
+                    </div>
+                    <div style={{ paddingBottom: '10px' }} >
+                      <TextField
+                        size="small"
+                        label="Select"
+                        sx={{ width: 227 }}
+                        select
+                        value={personName}
+                        onChange={handleChange}
+                      >
+                        {names.map((name) => (
+                          <MenuItem key={name} value={name}>
+                            {name}
+                          </MenuItem>
+                        ))}
+                      </TextField>
+                    </div>
+                    <div>
+                      <TextField
+                        size="small"
+                        label="Select"
+                        sx={{ width: 90 }}
+                        select
+                        value={num}
+                        onChange={handleChangeNum}
+                      >
+                        {nums.map((num) => (
+                          <MenuItem key={num} value={num}>
+                            {num}
+                          </MenuItem>
+                        ))}
+                      </TextField>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div style={{ borderBottom: '1px solid lightgray', padding: '10px', height: '60px'}}>
+               <MotorController
+                  onClick={(state) => {
+                   setActive(state);
+                  }}
+                />
+              </div>
             </div>
+            <MotorSwitchControl active={active} />
+            
           </div>
-        </Container>
+        </div>
+      </Container>
       <Fotter />
     </div>
- 
+
   )
 }
 

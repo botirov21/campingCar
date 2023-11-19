@@ -10,9 +10,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import img2 from '../assets/compareImg1.png'
 import img3 from '../assets/compareImg2.png'
 import img4 from '../assets/compareImg3.png'
+import Vimg from '../assets/VmenuImg.png'
 import '../index.css'
-import { Link } from 'react-router-dom';
-import { MotorVWrapper, VCarsInfo } from './carsInfoVStyle';
+import { MotorVWrapper, NavLink, VCarsInfo } from './carsInfoVStyle';
 const CarsInfoV = () => {
   const carData = card.carList;
   return (
@@ -199,24 +199,31 @@ const CarsInfoV = () => {
                 <div className='imgStyle' > <img style={{ width: "75px", height: "90" }} src={img4} alt="" /></div>
               </div>
             </div>
-            <div className='OrderCarDivRight'>
-              <div className='OrderCart'>
-                {carData.map((value, key) => {
+            <div className='VOrderCarDivRight'>
+              <div className='VOrderCart'>
+                {carData.slice(0, 8).map((value, key) => {
                   return (
-                    <Link to={`/MotorsCar-details/${value.id}`}>
-                      <div className='cart' key={key}>
+                    <NavLink to={`/MotorsCar-details/${value.id}`}>
+                      <div  className='Vcart' key={key}>
                         {/* <img src={img} alt="" /> */}
-                        <div className='carName' >{value.car.name}</div>
-                        <div className='carCompany'>{value.car.company}</div>
-                        <div className='carCost'>{value.car.cost}</div>
-                        <div >
+                        <div> <img src={Vimg} alt="" /></div>
+                        <div className='VCartImg'>
+                        </div>
+                        <div className='VmenuBtn' >
+                          <div className='VCartInfoDiv'>
+                            <div className='VCartInfo' >
+                              <div className='carName' >{value.car.name}</div>
+                              <div className='carCompany'>{value.car.company}</div>
+                            </div>
+                          <div className='carCost'>{value.car.cost}</div>
+                          </div>
                           <Stack direction="row" spacing={2}>
                             <Button className='orderBtn' variant="outlined">Order</Button>
                             <Button className='orderBtn' variant="outlined">Compare</Button>
                           </Stack>
                         </div>
                       </div>
-                    </Link>
+                    </NavLink>
                   )
                 }
                 )}

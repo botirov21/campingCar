@@ -10,13 +10,26 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
 `
+export const NavLinkLogo = styled(Link)`
+text-decoration: none;
+color: var(--blue, #006DAB);
+font-family: Montserrat;
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+`
 
 export const NavbarDiv=styled.div`
 height: 60px;
 display: flex;
 align-items: center;
 justify-content: center;
-
+position: fixed;
+background-color: white;
+width:100%;
+top: 0;
+z-index:1;
 h1{
 color: var(--blue, #006DAB);
 font-family: Montserrat;

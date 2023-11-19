@@ -1,13 +1,12 @@
 import React from 'react'
-import { NavbarDiv } from './navbarStyle'
-import { NavLink } from 'react-router-dom'
+import { NavLink, NavLinkLogo, NavbarDiv } from './navbarStyle'
 
 const Navbar = () => {
     return (
         <NavbarDiv>
-            <NavLink to="/">
+            <NavLinkLogo to="home">
                 <h1>Camper</h1>
-            </NavLink>
+            </NavLinkLogo>
             <div className='navbarElements'>
                 <NavLink to="/motor">
                     <div className='navbarElement'>Motor

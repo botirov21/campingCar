@@ -15,7 +15,7 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace , Montserrat;
+    monospace , Montserrat,  'Montserrat', sans-serif;;
 }
 @import url(https://fonts.googleapis.com/css?family=Montserrat+Subrayada:regular,700);
 @import  "~slick-carousel/slick/slick.css"; 
@@ -73,4 +73,137 @@ code {
 }
 [data-popup="tooltip"].popup-overlay {
   background: transparent;
+}
+.map {
+  width: 707px;
+  height: 278px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-width: medium;
+  border-color: #D8D8D8;
+}
+.login-container {
+  width: 500px;
+  height: 614px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+  padding: 40px;
+  margin: auto;
+
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.LoginInput {
+  width: 434px;
+  height: 50px;
+  border-radius: 10px;
+  background: rgba(55, 55, 55, 0.10);
+  border: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+.Loginbutton {
+  width: 434px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--blue, #006DAB);
+  border: none;
+  color: #FFF;
+  font-family: Open Sans;
+ font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.ORdiv{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.Orline{
+width: 119.017px;
+height: 1px;
+background: rgba(55, 55, 55, 0.15);
+}
+.naverDiv{
+width: 46px;
+height: 46px;
+flex-shrink: 0;
+background: #039600;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 35px;;
+}
+.googleDiv{
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  background: #BC0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 35px;;
+}
+  .kakoDiv{
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    background: #FFC700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 35px;;
+}
+.ImagesWraper{
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+.createButton {
+  width: 434px;
+  height: 50px;
+  flex-shrink: 0;
+ border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+  color: #FFF;
+  font-family: Open Sans;
+ font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+color: var(--blue, #006DAB);
+font-family: Open Sans;
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-top: 25px;
+
+border-color: #006DAB;
 }

@@ -1,33 +1,36 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom";
+
+export const NavLink = styled(Link)`
+text-decoration:none;
+`
 export const  MotorVWrapper=styled.div`
-border: black solid 1px;
+margin-top:30px;
+height:1800px;
 `
 export const VCarsInfo=styled.div`
-margin-top:20px;
-padding-bottom:300px;
+display: flex;
+justify-content: space-between;
 .OrderCarDiv{
 display: flex;  
 justify-content: center;
-gap:100px;
+gap:115px;
 }
 .OrderCarDivLeft{
 display: flex;
 flex-direction: column;
 /* border-bottom: 1px solid  rgba(55, 55, 55, 0.50); */
 }
-.OrderCarDivRight{
+.VOrderCarDivRight{
 display: flex;
-display: grid;
-grid-template-areas: "a a a a";
-margin-top:20px;
-padding-right:820px
+padding-top:760px;
 }
 
 .InputDiv{
 display: flex;
 align-items : center;
 gap: 40px;
-padding-left:10%;
+padding-left:13%;
 }
 input{
 width: 91px;
@@ -38,14 +41,7 @@ border-radius:15px;
 }
 .FormP{
 margin-bottom:2px;
-margin-top:0px;
-}
-
-.cart{
-padding:10px;
-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
-border-radius:10px;
-}
+}   
 .carName{
 color: var(--text, #373737);
 font-family: Montserrat;
@@ -72,20 +68,51 @@ font-weight: 700;
 line-height: normal;
 margin-top:18px;
 }
-.OrderCart{
-width: 230px;
-height: 307px;
-flex-shrink: 0;
+.VOrderCart{
+width: 955px;
+height: 180px;
+justify-content: center;
+align-items: center;
 border-radius: 20px;
 background: #FFF;
-display:grid;
-grid-template-areas: " a a a a";
+display:flex;
+flex-direction: column;
 gap: 50px;
 border-radius:10px;
 }
+.Vcart{
+padding:10px;
+box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+border-radius:10px;
+display: flex;
+gap:20px;
+align-items: center;
+}
+.VCartImg{
+flex: 1;
+}
+.VmenuBtn{
+flex: 1;
+display:flex;
+flex-direction: column;
+justify-content: end;
+height:120px;
+}
+.VCartInfoDiv{
+display:flex;
+align-items: center;
+justify-content:space-between;
+}
+.VCartInfo{
+display: flex;
+flex-direction:column;
+gap:5px;
+justify-content: start;
+}
+
 .orderBtn{
 border-radius: 10px;
-width: 95px;
+width: 291px;
 height: 35px;
 color: var(--blue, #006DAB);
 font-family: Montserrat;
